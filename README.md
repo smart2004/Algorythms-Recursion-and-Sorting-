@@ -30,7 +30,7 @@ To cut off inefficient solutions, your function will run from 100000 before 1000
 ##### Clone repository:
 
 ```
-git clone git@github.com:smart2004/Algorythms-Recursion_and_Sorting-.git
+git clone git@github.com:smart2004/Algorythms-Recursion-and-Sorting-.git
 ```
 
 ##### Switch to the folder:
@@ -95,13 +95,13 @@ Print a single integer, the number of points the players will score in the round
 ##### Clone repository:
 
 ```
-git clone git@github.com:smart2004/Algorythms-Basics-.git
+git@github.com:smart2004/Algorythms-Recursion-and-Sorting-.git
 ```
 
 ##### Switch to the folder:
 
 ```
-cd algorythms-basics-
+cd algorythms-recursion_and_sorting-
 ```
 
 ##### Launch python task:
