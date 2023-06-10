@@ -59,35 +59,35 @@ NOTE: There is no output data as per code solution implemented via compilator Ma
 
 ## hoare_sort.py
 ### Brief Task Description
+  
+Timo decided to organize a sports programming competition to find talented interns. Tasks are selected, participants are registered, tests are written. It remains to figure out how the winner will be determined at the end of the competition.
 
-The "Speed Typing Trainer" is a sixteen-key 4x4 square keyboard. Each key can display either a dot or a number from 1 to 9.
-The exercise on the simulator is divided into rounds:
-- each round consists of several games;
-- in different rounds, the number of games may be different;
-- the number of each game in the round is indicated by the counter t.
+Each participant has a unique login. When the competition ends, two indicators will be attached to it: the number of solved problems Pi and the size of the penalty Fi. The penalty is calculated for unsuccessful attempts and time spent on the task.
+
+Timofey decided to sort the table of results in the following way: when comparing two participants, the one with more problems solved will go higher. If the number of solved problems is equal, the participant with the lowest penalty goes first. If the penalties are the same, then the first one will be the one whose login comes earlier in alphabetical (lexicographical) order.
+
+Tim ordered sweatshirts for the winners and went to the store to pick them up the day before. In his absence, he commissioned you to implement a quick sort algorithm for the results table. Since Timothy loves sports programming and doesn't like wasting RAM, your sorting implementation cannot consume O(n) additional memory for intermediate data (this modification of quicksort is called "in-place").
   
-For each round, certain values are set on the keys, which remain unchanged during all the games of the round.
-The value of the game counter t cannot exceed the value of the largest number displayed on the keyboard in the current round.
-Two players take part in the exercise on the simulator, they play together on the same keyboard. For each round, the maximum number of keys that one player can press is set (it is denoted by the variable k and does not change during the round).
-In each individual game, the participants must press the keys together, on which the number corresponding to the number of the game t is displayed. For example, in the second game of a round, players must press all those keys that show a deuce.
-There may be games in the round where you do not need to press buttons: for example, in the above version of the round in games from t = 4 to t = 8, you do not need to press buttons: there are no numbers from 4 to 8 on the keyboard.
-If in the next game the participants have the opportunity to press all the necessary keys, they press them and get 1 point.
-Let's assume that for the round a set of buttons is given, as in the picture, and k = 3 (each of the participants can press no more than three buttons). Then in the second game (t = 2), where twos must be pressed, two players can only press 6 keys together (k * 2 = 6). But there are seven twos on the keyboard; participants will not be able to click all of them and will not receive a point.
-  
-Write a program that will receive data for a specific round:
-- k value,
-- values for buttons,
-and calculate the number of points that will be earned in this round.
+###### How in-place quick sort works
+As in the case of normal quicksort, which uses additional memory, you need to select a pivot element (eng. pivot), and then reorder the array. Let's make it so that at first there are elements that do not exceed the pivot, and then - greater than the pivot.
+
+The sort is then called recursively on the two resulting parts. It is at the stage of dividing elements into groups in the usual algorithm that additional memory is used. Now let's figure out how to implement this in-place step.
+
+Suppose we have somehow chosen a reference element. Let's get two pointers left and right, which will initially point to the left and right ends of the segment, respectively. Then we will move the left pointer to the right until it points to an element smaller than the reference one. Similarly, we move the right pointer to the left while it is on the element that exceeds the reference one. As a result, it turns out that to the left of left all elements exactly belong to the first group, and to the right of right - to the second. Elements with pointers are out of order. Let's swap them (most programming languages use the swap() function) and advance pointers to the next elements. We will repeat this action until left and right collide.
   
 ### Input Format
-  
-The first line contains an integer k (1 ≤ k ≤ 5).
+The first line contains the number of participants n, 1 ≤ n ≤ 100 000.
+Each of the next n lines contains information about one of the participants.
+The i-th participant is described by three parameters:
 
-The next four lines set the values for the buttons—4 characters per line. Each character is either a dot or a number from 1 to 9. The characters on the same line are consecutive and are not separated by spaces.
+- a unique login (a string of small Latin letters no longer than 20)
+- the number of solved problems Pi
+- Fi fine
+Fi and Pi are integers ranging from 0 to 10**9
 
 ### Output Format
   
-Print a single integer, the number of points the players will score in the round.
+For a sorted list of participants, print their logins in order, one per line.
 
 ### How to launch the project:
   
@@ -112,14 +112,19 @@ python hoare_sort.py
   
 ##### Example for input:
 ```
-3
-1231
-2..2
-2..2
-2..2
+5
+allen 10 100
+brandon 10 200
+randy 10 200
+mike 9 100
+james 9 100
 ```
   
 ##### Example for output:
 ```
-2
+allen
+brandon
+randy
+james
+mike
 ```  
