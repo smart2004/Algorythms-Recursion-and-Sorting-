@@ -1,4 +1,3 @@
-# 87682309
 """Tony Hoare effective sort method."""
 
 
