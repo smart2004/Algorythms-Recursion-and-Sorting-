@@ -42,7 +42,7 @@ cd algorythms-recursion_and_sorting-
 ##### Launch python task:
 
 ```
-NOTE: To launch the code it's required to uupload it into compilator Make
+NOTE: To launch the code it's required to upload it into compilator Make
 ```
 ###### NOTE: better use IDE for looking to code
   
