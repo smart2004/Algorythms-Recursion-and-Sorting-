@@ -42,19 +42,18 @@ cd algorythms-recursion_and_sorting-
 ##### Launch python task:
 
 ```
-python broken_search.py
+NOTE: To launch the code it's required to uupload it into compilator Make
 ```
-###### NOTE: better use IDE and start task @ the place
+###### NOTE: better use IDE for looking to code
   
 ##### Example for input:
 ```
-6
-0 4 1 10 0 8
+NOTE: There is no input data as per code solution implemented via compilator Make
 ```
   
 ##### Example for output:
 ```
-0 1 2 1 0 1
+NOTE: There is no output data as per code solution implemented via compilator Make
 ```
   
 
@@ -95,7 +94,7 @@ Print a single integer, the number of points the players will score in the round
 ##### Clone repository:
 
 ```
-git@github.com:smart2004/Algorythms-Recursion-and-Sorting-.git
+git clone git@github.com:smart2004/Algorythms-Recursion-and-Sorting-.git
 ```
 
 ##### Switch to the folder:
