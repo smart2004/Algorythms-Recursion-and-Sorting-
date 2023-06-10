@@ -1,4 +1,3 @@
-# 87711540
 """Broken array search."""
 
 
