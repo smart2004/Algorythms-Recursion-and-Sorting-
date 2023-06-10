@@ -1,41 +1,48 @@
 # algorythms-recursion-and-sorting- by smart200481 <Mikhail Sutormin>
 
-## builgings.py  
+## broken_search.py  
 ### Brief Task Description
 
-Tim is looking for a place to build a house. The street he wants to live on has length n, it consists of n identical consecutive sections. Each plot is either empty or house already built on the place.
-Sociable Tim does not want to live far away from other people on this street. Therefore, it is important for him to know for each plot the distance to the nearest empty plot. If the plot is empty, this value will be equal to zero - the distance to itself.
-Help Tim calculate the required distances. For this putrpose you have a street map. Houses in the city of Timo were numbered in the order in which they were built, so their numbers on the map are not ordered in any way. Empty areas are marked with zeros.
+Alla made a mistake when copying from one data structure to another. She stored an array of numbers in a ring buffer. The array was sorted in ascending order, and it was possible to find an element in it in logarithmic time. Alla copied the data from the ring buffer into a regular array, but shifted the data of the original sorted sequence. Now the array is not sorted. However, it is necessary to provide the ability to find an element in it for O(logn).
+It can be assumed that the array contains only unique elements.
+  
+The task must be submitted with the Make compiler, it is selected by default, there are no other compilers in the task. The solution is sent as a file. The required function signatures are in the code stubs on disk.
 
+You are required to implement a function that searches the broken array. Files with code stubs containing function signatures and a basic test for supported languages can be found on Yandex.Disk at the link. Note that you do not need to read data and output a response.
+  
 ### Input Format
   
-The first line contains value, the length of the street —– n (1 ≤ n ≤ 106). 
-The next line contains n non-negative integers — the numbers of houses and designations of empty plots on the map (zeroes). 
-It is guaranteed that there is at least one zero in the sequence. House numbers (positive numbers) are unique and do not exceed 109.
+The function takes an array of natural numbers and the desired number k. The length of the array does not exceed 10000. Array elements and number k do not outweigh 10000.
+In the examples:
+The first line contains a number n   -- is array length.
+The second line contains a positive number k is the desired element.
+Third line, separated by a space, is written n natural numbers are array elements.
 
 ### Output Format
   
-For each segment, print the distance to the nearest zero. Output the numbers on one line, separating them with spaces.
+The function must return the index of the element equal to k, if there is one in the array (numbering from zero). If the element is not found, the function should return −1.
+The array cannot be changed.
+To cut off inefficient solutions, your function will run from 100000 before 1000000 once.
 
-
+  
 ### How to launch the project:
   
 ##### Clone repository:
 
 ```
-git clone git@github.com:smart2004/Algorythms-Basics-.git
+git clone git@github.com:smart2004/Algorythms-Recursion_and_Sorting-.git
 ```
 
 ##### Switch to the folder:
 
 ```
-cd algorythms-basics-
+cd algorythms-recursion_and_sorting-
 ```
 
 ##### Launch python task:
 
 ```
-python buildings.py
+python broken_search.py
 ```
 ###### NOTE: better use IDE and start task @ the place
   
@@ -51,7 +58,7 @@ python buildings.py
 ```
   
 
-## hands_agility.py
+## hoare_sort.py
 ### Brief Task Description
 
 The "Speed Typing Trainer" is a sixteen-key 4x4 square keyboard. Each key can display either a dot or a number from 1 to 9.
@@ -100,7 +107,7 @@ cd algorythms-basics-
 ##### Launch python task:
 
 ```
-python hands_agility.py
+python hoare_sort.py
 ```
 ###### NOTE: better use IDE and start task @ the place
   
